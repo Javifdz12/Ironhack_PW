@@ -1,0 +1,13 @@
+body {
+    background-color:#00D1AE;
+}
+.menu {
+    background-color:#00D1AE;
+    width: 400px;
+    height: 50px;
+}
+.content {
+    background-color:red;
+    width: 400px;
+    height: 200px;
+}
