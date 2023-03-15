@@ -1,18 +1,23 @@
-.header {
-    background-color:pink;
-    text-align: center;
-    font-size: 10px;
-    font-weight: bold;
-    width:200px;
-    height:25px;
-    float:left;
+#ventprincipal{
+    width:850px;
+    border:1px solid black;
+    margin:0 auto;
 }
 
-.sidebar{
-    background-color: green;
-    text-align: center;
-    font-size: 10px;
-    font-weight: bold;
-    width:100px;
-    height:150px;
+#col1{
+    width:200px;
+    border:1px solid black;
+    margin:10px;
+    float:left
+}
+
+#col2{
+    width:605px;
+    border:1px solid black;
+    margin:10px;
+    float:left
+}
+
+.clear{
+    clear:both;
 }
