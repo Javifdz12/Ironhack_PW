@@ -2,35 +2,41 @@
     width:850px;
     border:1px solid black;
     margin:0 auto;
+    background:pink;
+    padding:5px;
 }
 
-#col1{
-    width:200px;
+#izq{
+    display:flex;
     margin:10px;
-    float:left
+    justify-content:flex-start;
 }
 
-#col2{
-    width:605px;
+#der{
+    display:flex;
     margin:10px;
-    float:left
+    justify-content:flex-end;
 }
 
-.header{
+#header{
     height: 35px;
-    background-color: green;
     border:1px solid black;
+    text-align: center;
+    background-color:white;
+    margin:5px;
 }
 
 .sidebar{
-    height: 269px;
-    background-color: red;
-    border:1px solid black;
+    width: 391px;
+    background-color: white;
+    text-align: center;
 }
 
-.main{
-    background-color:blue;
+#main{
+    background-color:white;
     border:1px solid black;
+    margin:5px;
+    padding:5px;
 }
 
 .footer{
