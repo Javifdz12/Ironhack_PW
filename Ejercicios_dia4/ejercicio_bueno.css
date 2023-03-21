@@ -27,7 +27,7 @@
     width:70%;
     flex-direction: column;
     float:left;
-    border-width: 0px 1px 1px 1px;
+    border-width: 0px 1px 0px 1px;
     border-color: black;
     border-style: solid;
 }
@@ -43,7 +43,9 @@
 
 #caja{
     display:flex;
-    border:1px solid black;
+    border-width: 1px 0px 1px 0px;
+    border-color: black;
+    border-style: solid;
     flex-direction: row;
 }
 
@@ -92,7 +94,7 @@ img{
 
     #col1{
         width:100%;
-        border-width: 0px 1px 1px 1px;
+        border-width: 0px 1px 0px 1px;
     }
 
     #col2{
