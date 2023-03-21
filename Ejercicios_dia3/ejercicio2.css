@@ -1,0 +1,45 @@
+#ventprincipal{
+    width:850px;
+    border:1px solid black;
+    margin:0 auto;
+}
+
+#col1{
+    width:200px;
+    margin:10px;
+    float:left
+}
+
+#col2{
+    width:605px;
+    margin:10px;
+    float:left
+}
+
+.header{
+    height: 35px;
+    border:1px solid green;
+    margin:3px;
+}
+
+.sidebar{
+    height: 269px;
+    border:1px solid  red;
+    margin:3px;
+}
+
+.main{
+    height:500px;
+    margin:3px;
+    border:1px solid blue;
+}
+
+.footer{
+    height: 35px;
+    border:1px solid purple;
+    margin:3px;
+}
+
+.clear{
+    clear:both;
+}
