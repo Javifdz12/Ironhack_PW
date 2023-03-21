@@ -1,18 +1,27 @@
 #ventprincipal{
     width:850px;
-    border:1px solid black;
     margin:0 auto;
 }
 
 #col1{
-    width:200px;
-    margin:10px;
+    width:25%;
+    margin:3px;
     float:left
 }
 
 #col2{
-    width:605px;
-    margin:10px;
+    width:65%;
+    margin:3px;
+    float:left
+}
+
+#colint1{
+    width:25%;
+    float:left
+}
+
+#colint2{
+    width:72%;
     float:left
 }
 
