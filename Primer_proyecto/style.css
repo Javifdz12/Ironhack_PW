@@ -52,12 +52,14 @@ h3{
     text-transform: uppercase;
     padding:10px;
     font-size: 85%;
+    font-weight: bold;
 }
 
 h4{
     text-transform: uppercase;
     padding:10px;
     font-size: 85%;
+    text-shadow: pink 1px 0px 10px;
 }
 
 p{
@@ -85,13 +87,14 @@ li{
     border:1px solid black;
     flex-direction: column;
     justify-content: flex-start;
-    background: white;
+    background-image: url("https://www.compartirwifi.com/blog/wp-content/uploads/2018/04/AAEAAQAAAAAAAAeeAAAAJDkzOTkxMGM5LTBiNTAtNDFiOC1iOGY4LTA0YzI5OWY2ZGU2NQ-e1483566736756-990x565.jpg");
 }
 
 #fil3{
     margin: 10px;
     display:flex;
     padding:10px;
+    background: white;
     border:1px solid black;
     flex-direction: column;
     justify-content: flex-start;
@@ -105,6 +108,7 @@ li{
     border:1px solid black;
     flex-direction: column;
     justify-content: flex-start;
+    background: white;
 
 }
 
@@ -126,7 +130,13 @@ a{
     color:black;
 }
 
+p{
+    justify-content: auto;
+}
+
 #img1{
+    margin-top:10px;
+    margin-bottom:10px;
     width: 100%;
 }
 
@@ -166,6 +176,7 @@ a{
         flex-direction: row;
     }
     #img1{
+        margin-right: 10px;
         width: 33%;
     }
 }
