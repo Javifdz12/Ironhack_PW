@@ -1,9 +1,15 @@
 #ventprincipal{
-    background:rgb(156, 163, 158);
-    border:1px solid black;
+    background-image: url("https://bitfinanzas.com/wp-content/uploads/Polygon-y-otras-blockchains.jpg");
+    border:1px solid rgb(1, 1, 41);
 }
 
 #main{
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+}
+
+#main2{
     text-align: center;
     display:flex;
     flex-direction:column;
@@ -27,22 +33,28 @@
 
 #header{
     padding: 10px;
-    background: grey;
     text-align: center;
-    border:1px solid black;
 }
 
 h1{
     text-transform: uppercase;
     padding:10px;
+    color: pink;
 }
 
 h2{
     text-transform: uppercase;
     padding:10px;
+    color: pink;
 }
 
 h3{
+    text-transform: uppercase;
+    padding:10px;
+    font-size: 85%;
+}
+
+h4{
     text-transform: uppercase;
     padding:10px;
     font-size: 85%;
@@ -60,9 +72,37 @@ li{
     margin: 10px;
     display:flex;
     padding:10px;
-    border:1px solid black;
+    border:1px solid rgb(1, 1, 41);
+    justify-content: flex-start;
     flex-direction: column;
     background: white;
+}
+
+#fil2{
+    margin: 10px;
+    display:flex;
+    padding:10px;
+    border:1px solid black;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: white;
+}
+
+#fil3{
+    margin: 10px;
+    display:flex;
+    padding:10px;
+    border:1px solid black;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+#fil4{
+    width: 84%;
+    display:flex;
+    text-align: center;
+    flex-direction: row;
 }
 
 a{
@@ -73,7 +113,7 @@ a{
     clear:both;
 }
 
-@media(min-width:500px){
+@media(min-width:600px){
     #main{
         padding-left:3%;
         padding-right:3%;
@@ -83,6 +123,11 @@ a{
     }
     #fil{
         width: 31%;
+        padding:2px;
+        margin:3px;
+    }
+    #fil3{
+        width: 48%;
         padding:2px;
         margin:3px;
     }
