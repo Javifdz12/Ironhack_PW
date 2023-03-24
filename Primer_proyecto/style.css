@@ -98,6 +98,16 @@ li{
 
 }
 
+#fil32{
+    margin: 10px;
+    display:flex;
+    padding:10px;
+    border:1px solid black;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
 #fil4{
     width: 84%;
     display:flex;
