@@ -65,6 +65,9 @@ h5{
     margin:1%;
     font-size:60%;
     text-transform:uppercase;
+    font-family:sans-serif;
+    font-style: normal;
+
 }
 
 p{
@@ -185,6 +188,8 @@ a{
 
 span{
     margin-top:0.5%;
+    font-family:sans-serif;
+    font-style: normal;
 }
 
 @media(min-width:600px){
