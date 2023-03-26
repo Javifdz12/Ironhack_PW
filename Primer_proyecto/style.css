@@ -59,6 +59,14 @@ h3{
     font-style: normal;
 }
 
+#h32{
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: bold;
+    font-family:arial;
+    font-style: normal;
+}
+
 
 h4{
     text-transform: uppercase;
@@ -269,6 +277,9 @@ span{
     span{
         height:0;
         width:0;
+    }
+    #h32{
+        font-size:120%;
     }
 }
 
