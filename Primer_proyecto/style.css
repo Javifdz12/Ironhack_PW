@@ -268,6 +268,9 @@ span{
         height: 40%;
         margin:5%;
     }
+    #fil2{
+        text-align: center;
+    }
     #fil22{
         display:flex;
         flex-direction: row;
