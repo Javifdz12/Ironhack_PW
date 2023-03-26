@@ -124,7 +124,7 @@ li{
     margin: 10px;
     display:flex;
     padding:10px;
-    border:1px solid black;
+    border:1px solid rgb(1, 1, 41);
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -211,6 +211,10 @@ span{
     font-style: normal;
 }
 
+#ul2{
+    color:white;
+}
+
 @media(min-width:800px){
     #main{
         padding-left:5%;
@@ -282,6 +286,9 @@ span{
     }
     #h32{
         font-size:120%;
+    }
+    #ul2{
+        color:black;
     }
 }
 
