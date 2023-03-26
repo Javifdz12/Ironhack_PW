@@ -12,7 +12,6 @@
 #main2{
     display:flex;
     flex-direction:column;
-    text-align: center;
 }
 
 #menu{
@@ -88,8 +87,8 @@ h5{
 
 p{
     font-size:85%;
-    margin:3%;
-    margin-bottom:2%;
+    margin:7%;
+    margin-bottom:3%;
     justify-content: auto;
     font-family:arial;
     font-style: normal;
@@ -197,8 +196,7 @@ a{
 
 #img3{
     border-radius: 50%;
-    margin-top: 30%;
-    margin-bottom: 30%;
+    margin:10%;
     width:100%;
     height: 100%;
 }
@@ -213,7 +211,7 @@ span{
     font-style: normal;
 }
 
-@media(min-width:600px){
+@media(min-width:800px){
     #main{
         padding-left:5%;
         padding-right:3%;
