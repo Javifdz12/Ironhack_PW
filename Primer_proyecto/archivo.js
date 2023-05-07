@@ -29,22 +29,25 @@ document.addEventListener("DOMContentLoaded", function() {
         return true;
     }
 
-    formulario.addEventListener("click", function (event) {
+    formulario.addEventListener("submit", function (event) {
         event.preventDefault();
 
         if (validarFormulario()) {
-            var nombre = document.getElementById("name").value;
-            var mensaje = document.getElementById("comment").value;
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "guardar.php", true);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                alert(xhr.responseText);
+            const solicitud = new XMLHttpRequest();
+            solicitud.onreadystatechange = function() {
+                if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                // Si la solicitud ha sido exitosa, mostrar el mensaje de confirmación
+                mensaje.innerHTML = "Tu comentario ha sido guardado correctamente.";
+                formulario.reset(); // Reiniciar el formulario
+                } else if (this.readyState === XMLHttpRequest.DONE) {
+                // Si la solicitud ha fallado, mostrar un mensaje de error
+                mensaje.innerHTML = "Ha ocurrido un error al guardar tu comentario.";
                 }
             };
-            xhr.send("nombre=" + encodeURIComponent(nombre) + "&mensaje=" + encodeURIComponent(mensaje));
-
+            solicitud.open("POST", "guardar.php", true);
+            solicitud.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            solicitud.send("nombre=" + nombreInput + "&comentario=" + mensajeInput);
+            // Recargar la página
             location.reload();
         }
     });

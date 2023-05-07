@@ -1,14 +1,28 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST["nombre"];
-    $mensaje = $_POST["mensaje"];
-    // Abrir el archivo de comentarios en modo de escritura y agregar
-    $archivo_comentarios = fopen("datos.txt", "a");
-    fwrite($archivo_comentarios, $nombre . ": " . $mensaje . "\n");
-    fclose($archivo_comentarios);
-    echo "Los datos se han recibido correctamente: nombre = " . $nombre . ", mensaje = " . $mensaje;
+$nombre = $_POST["nombre"];
+$comentario = $_POST["mensaje"];
+
+if (empty($nombre) || empty($comentario)) {
+  // Si alguno de los campos está vacío, enviar un mensaje de error
+    echo "Ha ocurrido un error al guardar tu comentario.";
+} else {
+  // Si los campos no están vacíos, guardar el comentario en un archivo de texto
+    $archivo = fopen("comentarios.txt", "a");
+    fwrite($archivo, $nombre . " dijo: " . $comentario . "\n");
+    fclose($archivo);
+
+  // Enviar un mensaje de confirmación
+    echo "Tu comentario ha sido guardado correctamente.";
 }
 ?>
+
+
+
+
+
+
+
+
 
 
 
