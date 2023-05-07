@@ -1,53 +1,52 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Obtener el formulario y los campos de entrada
     const formulario = document.getElementById("mi_formulario");
     const nombreInput = document.getElementById("name");
     const mensajeInput = document.getElementById("comment");
+    var boton = document.getElementById("boton");
 
-    // Función para validar el formulario
-    function validarFormulario() {
-    // Validar que se haya ingresado un nombre
-    if (nombreInput.value.trim() === "") {
-        alert("Por favor ingrese su nombre");
-        nombreInput.focus();
-        return false;
-    }
-
-
-    // Validar que se haya ingresado un mensaje
-    if (mensajeInput.value.trim() === "") {
-        alert("Por favor ingrese un mensaje");
-        mensajeInput.focus();
-        return false;
-    }
-
-    // Si se han validado todos los campos, enviar el formulario
-    return true;
-    }
-
-    // Manejar el evento submit del formulario
-    formulario.addEventListener("submit", function (event) {
-    // Prevenir el comportamiento predeterminado del formulario
-    event.preventDefault();
-
-    // Validar el formulario
-    if (validarFormulario()) {
-        // Si el formulario es válido, enviarlo
-        formulario.submit();
-    }
+    boton.addEventListener("mouseover", function() {
+        boton.style.backgroundColor = "green";
     });
 
-});
+    boton.addEventListener("mouseout", function() {
+        boton.style.backgroundColor = "white";
+    });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const formulario = document.getElementById("mi_formulario");
-    formulario.addEventListener("submit", function(event) {
+
+    function validarFormulario() {
+        if (nombreInput.value.trim() === "") {
+            alert("Por favor ingrese su nombre");
+            nombreInput.focus();
+            return false;
+        }
+
+        if (mensajeInput.value.trim() === "") {
+            alert("Por favor ingrese un mensaje");
+            mensajeInput.focus();
+            return false;
+        }
+
+        return true;
+    }
+
+    formulario.addEventListener("click", function (event) {
         event.preventDefault();
 
-        const datos = new FormData(formulario);
+        if (validarFormulario()) {
+            var nombre = document.getElementById("name").value;
+            var mensaje = document.getElementById("comment").value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "guardar.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                alert(xhr.responseText);
+                }
+            };
+            xhr.send("nombre=" + encodeURIComponent(nombre) + "&mensaje=" + encodeURIComponent(mensaje));
 
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", "guardar.php", true);
-        xhr.send(datos);
-        });
+            location.reload();
+        }
+    });
 });
+

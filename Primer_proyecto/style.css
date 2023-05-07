@@ -177,6 +177,11 @@ footer{
     background: white;
 }
 
+#boton {
+    background-color: white;
+    cursor: pointer;
+}
+
 a{
     color:black;
     text-decoration: none;
