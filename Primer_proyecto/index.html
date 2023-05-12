@@ -4,20 +4,12 @@
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script>
-            function onSubmit(token) {
-                // Habilita los elementos del formulario
-                document.querySelectorAll("#formularioContacto input, #formularioContacto textarea, #formularioContacto button").forEach(function(el) {
-                el.disabled = false;
-                });
-                // Elimina la capa de bloqueo
-                document.getElementById("bloqueo").remove();
-            }
-        </script>
     </head>
     <body>
         <div id="bloqueo">
-            <div class="g-recaptcha" data-sitekey="6LehwwQmAAAAAASoUMKlO25d-GvH4aLC_PzBT9ja" data-callback="onSubmit"></div>
+            <form action="?" method="POST">
+                <div class="g-recaptcha" data-sitekey="6LehwwQmAAAAAASoUMKlO25d-GvH4aLC_PzBT9ja"></div>
+            </form>
         </div>
         <div id="ventprincipal">
             <div id="header">
