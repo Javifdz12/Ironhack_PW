@@ -5,6 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
+        <div id="bloqueo">
+            <div class="g-recaptcha" data-sitekey="TU_SITE_KEY" data-callback="onSubmit"></div>
+        </div>
+        <script>
+            function onSubmit(token) {
+                // Habilita los elementos del formulario
+                document.querySelectorAll("#formularioContacto input, #formularioContacto textarea, #formularioContacto button").forEach(function(el) {
+                    el.disabled = false;
+                });
+                // Elimina la capa de bloqueo
+                document.getElementById("bloqueo").remove();
+            }
+        </script>
         <div id="ventprincipal">
             <div id="header">
                 <div style="text-align:center;">
