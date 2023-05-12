@@ -3,21 +3,22 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-    <body>
-        <div id="bloqueo">
-            <div class="g-recaptcha" data-sitekey="6LehwwQmAAAAAASoUMKlO25d-GvH4aLC_PzBT9ja" data-callback="onSubmit"></div>
-        </div>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script>
             function onSubmit(token) {
                 // Habilita los elementos del formulario
                 document.querySelectorAll("#formularioContacto input, #formularioContacto textarea, #formularioContacto button").forEach(function(el) {
-                    el.disabled = false;
+                el.disabled = false;
                 });
                 // Elimina la capa de bloqueo
                 document.getElementById("bloqueo").remove();
             }
         </script>
+    </head>
+    <body>
+        <div id="bloqueo">
+            <div class="g-recaptcha" data-sitekey="6LehwwQmAAAAAASoUMKlO25d-GvH4aLC_PzBT9ja" data-callback="onSubmit"></div>
+        </div>
         <div id="ventprincipal">
             <div id="header">
                 <div style="text-align:center;">
